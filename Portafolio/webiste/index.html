@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#sobre-mi">Sobre Mi</a>
+      <a href="#tabla-proyectos">Proyectos</a>
+      <a href="#conocimientos">Conocimientos</a>
+      <a href="#redes-sociales">Redes Sociales</a>
+
+    </nav>
+
+    <h1>Portafolio</h1>
+
+    <header id="sobre-mi">
+      <div class="left">
+        <img
+          src="https://avatars.githubusercontent.com/u/74026143?s=400&u=dbace84616c80d19b774d42a973d3a8530e49e54&v=4"
+          alt="imagen de perfil en GitHub"
+          class="pfp"
+        >
+        <p><small>Pfp en GitHub</small></p>
+      </div>
+      <div class="right">
+        <h2>Sobre Mi:</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+          aspernatur voluptas veniam vitae! Dolorem, rerum soluta! Aliquam,
+          tempore reprehenderit earum blanditiis dicta, quibusdam alias
+          temporibus illo possimus deleniti esse commodi!
+        </p>
+      </div>
+    </header>
+
+    <article class="proyectos" id="tabla-proyectos">
+      <h2>Mis Proyectos:</h2>
+      <table>
+        <tr>
+          <th>Proyecto</th>
+          <th>Foto</th>
+        </tr>
+        <tr>
+          <td><a>Estadísticas COVID 2019:</a></td>
+          <td><img src="./img/covid.png" class="img-tabla"></td>
+        </tr>
+        <tr>
+          <td><a>Base de Datos para Escuelas:</a></td>
+          <td><img src="./img/bdd.png" class="img-tabla"></td>
+        </tr>
+        <tr>
+          <td><a>Juego Snake:</a></td>
+          <td><img src="./img/snake.png" class="img-tabla"></td>
+        </tr>
+      </table>
+    </article>
+
+    <article id="conocimientos">
+      <section class="left">
+        <h3>Lenguajes de programacion:</h3>
+        <ol>
+          <li>Python</li>
+          <li>MySQL</li>
+          <li>Java</li>
+          <li>C</li>
+          <li>Go</li>
+          <li>R</li>
+          <li>C#</li>
+          <li>Javascript</li>
+        </ol>
+      </section>
+      <section class="right">
+        <h3>Deje su opinion sobre mi pagina:</h3>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" />
+          <br>
+          <label for="opinion">Opinion:</label>
+          <textarea cols="50" rows="10" id="opinion"></textarea>
+          <br>
+          <button type="button">Enviar</button>
+        </form>
+      </section>
+    </article>
+
+    <footer id="redes-sociales">
+      <h3>Mis Redes Sociales:</h3>
+      <ul>
+        <li><img src="#" alt="GitHub icon"></li>
+        <li><img src="#" alt="LinkedIn icon"></li>
+        <li><img src="#" alt="Twitter icon"></li>
+      </ul>
+    </footer>
+  </body>
+</html>

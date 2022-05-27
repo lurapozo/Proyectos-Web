@@ -1,0 +1,35 @@
+body{
+    background-color: #FFF0F5;
+    font-family: "Roboto";
+    color: #797979;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-style: normal;
+}
+
+ol {
+    text-align: left;
+}
+
+footer, nav {
+
+    background: rgba(114, 105, 255, 0.27);
+}
+
+table {
+    border: 1px solid #797979;
+    background: rgba(114, 105, 255, 0.27);
+}
+.pfp {
+    border-radius: 151px;
+    height: 302px;
+}
+
+.img-tabla {
+    width: 402px;
+    height: 144px;
+}
