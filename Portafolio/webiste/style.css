@@ -1,35 +1,109 @@
-body{
-    background-color: #FFF0F5;
-    font-family: "Roboto";
-    color: #797979;
-    text-align: center;
-    align-items: center;
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #fff0f5;
+  font-family: "Roboto";
+  color: #797979;
+  text-align: center;
+  align-items: center;
+}
+
+nav {
+  background: #d9cbf8;
+  display:flex;
+  justify-content:space-between;
+  position: sticky;
+  top: 0;
+  border: solid 0.1px rgb(145, 141, 141);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+a:visited {
+  color: #439ecb;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1 {
-    font-weight: 700;
-    font-style: normal;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 20px;
+}
+
+h3 {
+  padding: 11px 0 9px 0;
 }
 
 ol {
-    text-align: left;
-}
-
-footer, nav {
-
-    background: rgba(114, 105, 255, 0.27);
+  text-align: left;
 }
 
 table {
-    border: 1px solid #797979;
-    background: rgba(114, 105, 255, 0.27);
+  border: 1px solid #797979;
+  border-collapse: collapse;
+  background: #d9cbf8;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
+th, td {
+  border: 1px solid #797979;
+
+
+}
+
+footer{
+  background: #d9cbf8;
+  height: 5rem;
+  margin-top: 10px;
+  border: solid 0.1px rgb(145, 141, 141);
+
+}
+
+
+footer > ul {
+  display:flex;
+  justify-content:space-between;
+  position: sticky;
+  top: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  list-style: none;
+}
+
 .pfp {
-    border-radius: 151px;
-    height: 302px;
+  border-radius: 151px;
+  height: 302px;
 }
 
 .img-tabla {
-    width: 402px;
-    height: 144px;
+  width: 402px;
+  height: 144px;
+}
+
+#github-profile {
+  width: 250px;
+  height: auto;
+}
+
+#sobre-mi {
+  display:flex;
+  justify-content:space-evenly;
+}
+
+#conocimientos {
+  display:flex;
+  justify-content:space-evenly;
+  justify-items: center;
 }
