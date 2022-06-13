@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/mobil.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
@@ -21,7 +22,7 @@
     <h1>Portafolio</h1>
 
     <header id="sobre-mi">
-      <div class="left">
+      <div>
         <img
           id="github-profile"
           src="https://avatars.githubusercontent.com/u/74026143?s=400&u=dbace84616c80d19b774d42a973d3a8530e49e54&v=4"
@@ -30,7 +31,7 @@
         >
         <p><small>Pfp en GitHub</small></p>
       </div>
-      <div class="right">
+      <div>
         <h2>Sobre Mi:</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eveniet eaque quae, sapiente error commodi accusantium! Nobis itaque sit autem est suscipit repellat unde placeat, accusamus facilis aliquam velit nisi consequatur maxime adipisci aperiam, beatae molestiae hic doloremque minima ab error assumenda. Facere enim sed blanditiis saepe harum necessitatibus itaque doloribus voluptatem dolorum nostrum, molestiae unde rerum consequuntur, temporibus perferendis veritatis mollitia distinctio reprehenderit rem cum maiores laudantium ratione! Quos delectus iste voluptatibus quod molestias praesentium possimus voluptatum dolorum, excepturi aliquid error explicabo voluptas. Nesciunt ratione quaerat cum earum nam quod, officia repudiandae hic laborum. Provident dolorem magnam temporibus repudiandae!
@@ -38,7 +39,7 @@
       </div>
     </header>
 
-    <article class="proyectos" id="tabla-proyectos">
+    <div class="proyectos" id="tabla-proyectos">
       <h2>Mis Proyectos:</h2>
       <table>
         <tr>
@@ -46,39 +47,39 @@
           <th>Foto</th>
         </tr>
         <tr>
-          <td><a>Estadísticas COVID 2019:</a></td>
-          <td><img src="./img/covid.png" class="img-tabla"></td>
+          <td><a href="https://github.com/lurapozo/Proy2P_Ortiz_Pisco_Ramos">Estadísticas COVID 2019:</a></td>
+          <td><img src="./img/covid.png" class="img-tabla" alt="captura de la plicacion de covid"></td>
         </tr>
         <tr>
-          <td><a>Base de Datos para Escuelas:</a></td>
-          <td><img src="./img/bdd.png" class="img-tabla"></td>
+          <td><a href="https://github.com/lurapozo/Proyecto_Base_de_Datos">Base de Datos para Escuelas:</a></td>
+          <td><img src="./img/bdd.png" class="img-tabla" alt="captura del model o de base de datos"></td>
         </tr>
         <tr>
-          <td><a>Juego Snake:</a></td>
-          <td><img src="./img/snake.png" class="img-tabla"></td>
+          <td><a href="https://github.com/lurapozo/Taller01-Snake">Juego Snake:</a></td>
+          <td><img src="./img/snake.png" class="img-tabla" alt="captura del juego snake"></td>
         </tr>
       </table>
-    </article>
+    </div>
 
-    <article id="conocimientos">
-      <section class="left">
+    <div id="conocimientos">
+      <div>
         <h3>Lenguajes de programacion:</h3>
-        <ol>
-          <section class="left">
+        <div class="lenguajes">
+          <ol>
             <li>Python</li>
             <li>MySQL</li>
             <li>Java</li>
             <li>C</li>
-          </section>
-          <section class="right">
+          </ol>
+          <ol start="5">
             <li>Go</li>
             <li>R</li>
             <li>C#</li>
             <li>Javascript</li>
-          </section>
-        </ol>
-      </section>
-      <section class="right">
+          </ol>
+        </div>
+      </div>
+      <div>
         <h3>Deje su opinion sobre mi pagina:</h3>
         <form>
           <label for="nombre"><b>Nombre:</b></label>
@@ -91,15 +92,15 @@
           <br>
           <button type="submit">Enviar</button>
         </form>
-      </section>
-    </article>
+      </div>
+    </div>
 
     <footer id="redes-sociales">
       <h3>Mis Redes Sociales:</h3>
       <ul>
-        <li><img src="./img/iconmonstr-github-1.svg" alt="GitHub icon"></li>
-        <li><img src="./img/iconmonstr-linkedin-3.svg" alt="LinkedIn icon"></li>
-        <li><img src="./img/iconmonstr-twitter-3.svg" alt="Twitter icon"></li>
+        <li><a href="https://github.com/lurapozo"><img src="./img/iconmonstr-github-1.svg" alt="GitHub icon"></a></li>
+        <li><a href="https://www.linkedin.com/"><img src="./img/iconmonstr-linkedin-3.svg" alt="LinkedIn icon"></a></li>
+        <li><a href="https://twitter.com/"><img src="./img/iconmonstr-twitter-3.svg" alt="Twitter icon"></a></li>
       </ul>
     </footer>
   </body>
