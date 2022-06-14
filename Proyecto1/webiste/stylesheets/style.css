@@ -37,6 +37,9 @@ a:hover {
   text-decoration: underline;
 }
 
+a img {
+  height: 30px;
+}
 h1 {
   font-weight: 700;
   font-style: normal;
@@ -45,9 +48,14 @@ h1 {
   font-size:calc(10px + 2vw);
 }
 
-h2, h3 {
+h2 {
   padding: 11px 0 9px 0;
-  font-size:calc(8px + 1.8vw);
+  font-size:calc(10px + 1.9vw);
+}
+
+h3 {
+  padding: 11px 0 9px 0;
+  font-size:calc(7px + 1.7vw);
 }
 
 table {
@@ -58,15 +66,14 @@ table {
   margin-right: auto;
   width: 80%;
 }
+
 th, td {
   border: 1px solid #797979;
-
-
 }
 
 footer{
   background: #d9cbf8;
-  height: 5rem;
+  height: 15vh;
   margin-top: 10px;
   border: solid 0.1px rgb(145, 141, 141);
 
@@ -100,6 +107,11 @@ input, textarea, button {
   border-style: none;
 }
 
+iframe {
+  width: 90vw;
+  height: 300px;
+}
+
 .pfp {
   border-radius: 151px;
   height: 302px;
@@ -111,6 +123,7 @@ input, textarea, button {
 }
 .lenguajes {
   display: flex;
+  padding-left: 15%;
 }
 
 #github-profile {
