@@ -14,10 +14,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             li.appendChild(document.createTextNode(game.name))
             ul.appendChild(li)
         }
+        cargarPokes()
         pokesGen()
         juegosGen()
         genero()
-
+        pokesColor()
+        pokesType()
     } catch(e){
         console.log(e)
     }
@@ -84,5 +86,106 @@ async function pokesGen() {
         tr.appendChild(td1)
         tr.appendChild(td2)  
         tb.appendChild(tr)
+    }
+}
+
+async function pokesColor() {
+    let pokesColor = await conexion("https://pokeapi.co/api/v2/pokemon-color")
+    let tb = document.getElementById("tabla3")
+    for (color of pokesColor.results) {
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        let td2 =document.createElement("td")
+        td1.innerHTML = color.name
+        let colorData = await conexion(color.url)
+        td2.innerHTML = colorData.pokemon_species.length
+        tr.appendChild(td1)
+        tr.appendChild(td2)  
+        tb.appendChild(tr)   
+    }
+}
+
+async function pokesType() {
+    let pokesType = await conexion("https://pokeapi.co/api/v2/type")
+    let tb = document.getElementById("tabla4")
+    for (type of pokesType.results) {
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        let td2 =document.createElement("td")
+        td1.innerHTML = type.name
+        let typeData = await conexion(type.url)
+
+        td2.innerHTML = typeData.pokemon.length
+        tr.appendChild(td1)
+        tr.appendChild(td2)  
+        tb.appendChild(tr)   
+    }
+}
+
+async function cargarPokes() {
+    let pokes = await conexion("https://pokeapi.co/api/v2/pokemon/")
+    for (let poke of pokes.results){
+        let plantilla =  `<option value = ${poke.name}>${poke.name}</option>`
+        document.querySelector('select').innerHTML += plantilla
+    }
+}
+
+
+const selectElement = document.querySelector('select')
+selectElement.addEventListener('change', (event) => {
+    let selection = document.querySelector('div.input-group > select')
+    let textOption = selection.options[selection.selectedIndex].text
+
+    mostrarDatos(textOption)
+});
+
+async function mostrarDatos(text) {
+    let poke = await conexion(`https://pokeapi.co/api/v2/pokemon/${text}`)
+    let tb = document.getElementById("tabla5")
+    tb.innerHTML = `        <tr>
+    <th>Type</th>
+    <th>Fuerte contra</th>
+    <th>Debil contra</th>
+    <th>Resistente contra</th>
+</tr>`
+    for (type of poke.types){
+        let typeName = type.type.name
+        let typePage = await conexion(type.type.url)
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        td1.innerHTML = typeName
+        let tdFuerte =document.createElement("td")
+        let tdDebil =document.createElement("td")
+        let tdResist =document.createElement("td")
+
+        let ulF=document.createElement('ul');
+        let ulD=document.createElement('ul');
+        let ulR=document.createElement('ul');
+
+
+        for (double of typePage.damage_relations.double_damage_to){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulF.appendChild(li)
+        }
+        for (double of typePage.damage_relations.double_damage_from){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulD.appendChild(li)
+        }
+        for (double of typePage.damage_relations.half_damage_from){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulR.appendChild(li)
+        }
+        tdFuerte.appendChild(ulF)
+        tdDebil.appendChild(ulD)
+        tdResist.appendChild(ulR)
+        tr.appendChild(td1)
+        tr.appendChild(tdFuerte)
+        tr.appendChild(tdDebil)
+        tr.appendChild(tdResist)
+        tb.appendChild(tr)
+
     }
 }
