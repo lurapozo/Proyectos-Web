@@ -49,7 +49,7 @@
                 <h1><span style="color:#61B8EF">Proyecto 2</span></h1>
                 <div class="navbar-nav align-items-center ms-auto">
                     
-                    <h3><span style="color:#79C9FC">By: lurapozo</span></h3>
+                    <h4><span style="color:#79C9FC">Author: <a href="https://github.com/lurapozo">Lurapozo</a></span></h4>
 
                     
                 </div>
@@ -63,25 +63,25 @@
 
                     <div class="col-sm-12 col-xl-8">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Single Line Chart</h6>
+                            <h6 class="mb-4">Cantidad de juegos por generación</h6>
                             <canvas id="line-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-4">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Pie Chart</h6>
+                            <h6 class="mb-4">Distribución de pokemones por género</h6>
                             <canvas id="pie-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Single Bar Chart</h6>
+                            <h6 class="mb-4">Cantidad de pokemones por color</h6>
                             <canvas id="bar-chart"></canvas>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Multiple Bar Chart</h6>
+                            <h6 class="mb-4">Cantidad de pokemones por tipo (los primeros 12 tipos)</h6>
                             <canvas id="bar-chart2"></canvas>
                         </div>
                     </div>
@@ -90,52 +90,30 @@
                 </div>
             </div>
             <!-- Chart End -->
+
             <div class="container-fluid pt-4 px-4">
+
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Responsive Table</h6>
+                            <h6 class="mb-4">Tabla de tipos por pokemon</h6>
+                            <div class="input-group">
+                                <select name="select" class="custom-select custom-select-lg form-control " required="">
+                                    <option value="-1" selected="">Seleccione el pokemon</option>
+                                  </select>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Fuerte</th>
+                                            <th scope="col">Debil</th>
+                                            <th scope="col">Resistente</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>jhon@email.com</td>
-                                            <td>USA</td>
-                                            <td>123</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@email.com</td>
-                                            <td>UK</td>
-                                            <td>456</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@email.com</td>
-                                            <td>AU</td>
-                                            <td>789</td>
-                                            <td>Member</td>
-                                        </tr>
+                                    <tbody id="tabla5">
+
                                     </tbody>
                                 </table>
                             </div>

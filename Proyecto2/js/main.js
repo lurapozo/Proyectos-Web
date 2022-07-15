@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         genero()
         pokesColor()
         pokesType()
+        cargarPokes()
     } catch(e){
         console.log(e)
     }
@@ -201,4 +202,66 @@ var myChart4 = new Chart(ctx4, {
         responsive: true
     }
 });
+}
+
+const selectElement = document.querySelector('select')
+selectElement.addEventListener('change', (event) => {
+    let selection = document.querySelector('div.input-group > select')
+    let textOption = selection.options[selection.selectedIndex].text
+
+    mostrarDatos(textOption)
+});
+
+async function cargarPokes() {
+    let pokes = await conexion("https://pokeapi.co/api/v2/pokemon/")
+    for (let poke of pokes.results){
+        let plantilla =  `<option value = ${poke.name}>${poke.name}</option>`
+        document.querySelector('select').innerHTML += plantilla
+    }
+}
+
+async function mostrarDatos(text) {
+    let poke = await conexion(`https://pokeapi.co/api/v2/pokemon/${text}`)
+    let tb = document.getElementById("tabla5")
+    tb.innerHTML = ""
+    for (type of poke.types){
+        let typeName = type.type.name
+        let typePage = await conexion(type.type.url)
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        td1.innerHTML = typeName
+        let tdFuerte =document.createElement("td")
+        let tdDebil =document.createElement("td")
+        let tdResist =document.createElement("td")
+
+        let ulF=document.createElement('ul');
+        let ulD=document.createElement('ul');
+        let ulR=document.createElement('ul');
+
+
+        for (double of typePage.damage_relations.double_damage_to){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulF.appendChild(li)
+        }
+        for (double of typePage.damage_relations.double_damage_from){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulD.appendChild(li)
+        }
+        for (double of typePage.damage_relations.half_damage_from){
+            let li=document.createElement('li')
+            li.innerHTML = double.name
+            ulR.appendChild(li)
+        }
+        tdFuerte.appendChild(ulF)
+        tdDebil.appendChild(ulD)
+        tdResist.appendChild(ulR)
+        tr.appendChild(td1)
+        tr.appendChild(tdFuerte)
+        tr.appendChild(tdDebil)
+        tr.appendChild(tdResist)
+        tb.appendChild(tr)
+
+    }
 }
