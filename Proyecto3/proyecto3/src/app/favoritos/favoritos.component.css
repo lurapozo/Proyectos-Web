@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+}
+.lista {
+    display: flex;
+    flex-direction: row;  
+    list-style: none; 
+}
+.lista li {
+    margin: 0 5vw;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-card {
+    max-width: 20vh;
+    margin: 0 1vw;
+
+}
+
+.comics-row{
+    display: flex;
+    flex-direction: row;  
+    margin-bottom: 5vw;
+}
+
+.icono {
+    height: 200px;
+}
+
+@media only screen and (max-width: 512px) {
+    .comics-row{
+        flex-direction: column;
+    }
+    .example-card {
+        max-width: 40vh;
+        margin: 5vw 0;
+    
+    }
+    .example-button-row{
+        display: flex;
+        flex-direction: column; 
+        padding: 5vw 20vw;   
+    }
+}

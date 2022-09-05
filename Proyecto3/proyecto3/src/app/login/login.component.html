@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/login">Login</button>
+    <button mat-menu-item routerLink="/comic">Ver Comics</button>
+    <button mat-menu-item routerLink="/favoritos">Favoritos</button>
+    <button mat-menu-item routerLink="/principal">Inicio</button>
+  </mat-menu>
+  
+  </mat-toolbar>
+
+<h1>Iniciar Sesión</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Usuario</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+</div>
+<button routerLink="/" mat-flat-button color="primary">Iniciar Sesión</button>
+
+<p>¿Se te olvidó tu contraseña? Que mal</p>
+<p>¿Aún no tienes cuenta? Registrate</p>

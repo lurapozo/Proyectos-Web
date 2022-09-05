@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" >
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login">Login</button>
+      <button mat-menu-item routerLink="/comic">Ver Comics</button>
+      <button mat-menu-item routerLink="/favoritos">Favoritos</button>
+      <button mat-menu-item routerLink="/principal">Inicio</button>
+    </mat-menu>
+  
+  </mat-toolbar>
+  <div class="col-12 row ">
+    <mat-form-field appearance="fill">
+      <mat-label>Superheroes</mat-label>
+      <mat-select (selectionChange)="onChange($event)">
+        <div class="comics-row" *ngFor="let superheroes of arrSup">
+          <mat-option [value]="superheroes.nombre" id={{superheroes.nombre}}>
+            {{superheroes.nombre}}
+          </mat-option>
+        </div>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+    <mat-card class="noticia-card col-5 m-2 comic {{comics.personajes}}" *ngFor="let comics of arrCom">
+        <mat-card-title>{{comics.titulo}}</mat-card-title>
+        <mat-card-subtitle>{{comics.personajes}}</mat-card-subtitle>
+        <img mat-card-image src="{{comics.imagen}}" alt={{comics.imagen}}>
+        <mat-card-content>
+          <p>
+            <b>Writer: </b>{{comics.authors.writer}}<br>
+            <b>Illustrator: </b>{{comics.authors.illustrator}}<br>
+            <b>Inker: </b>{{comics.authors.inker}}<br>
+          </p>
+        </mat-card-content>
+      </mat-card>
+  
+  
