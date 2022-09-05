@@ -1,32 +1,30 @@
-<mat-toolbar color="primary">
-
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/login">Login</button>
-    <button mat-menu-item routerLink="/comic">Ver Comics</button>
-    <button mat-menu-item routerLink="/favoritos">Favoritos</button>
-    <button mat-menu-item routerLink="/principal">Inicio</button>
-  </mat-menu>
-  
-  </mat-toolbar>
-
-<h1>Iniciar Sesión</h1>
-  <mat-form-field appearance="fill">
-    <mat-label>Usuario</mat-label>
-    <input matInput>
-  </mat-form-field>
-
-  
-<div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Contraseña</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-    </mat-form-field>
-</div>
-<button routerLink="/" mat-flat-button color="primary">Iniciar Sesión</button>
-
-<p>¿Se te olvidó tu contraseña? Que mal</p>
-<p>¿Aún no tienes cuenta? Registrate</p>
+<article class="markdown-body">
+  <h1 class="atx" id="metodos-de-la-api-rest">Metodos de la API REST</h1>
+  <h2 class="atx" id="mostrar-editoriales">Mostrar Editoriales</h2>
+  <p><mark>GET </mark><code> https://localhost:4200/editorials</code></p>
+  <p><img alt="https://cdn.discordapp.com/attachments/985638124271054928/1016162896922808330/unknown.png"
+      src="https://cdn.discordapp.com/attachments/985638124271054928/1016162896922808330/unknown.png"></p>
+  <p>Muestra el id, nombre, cantidad de empleados, fundador, el jefe actual, la fecha de creacion y el pais de origen de
+    cada editorial.</p>
+  <h2 class="atx" id="mostrar-datos-de-1-superheroe">Mostrar datos de 1 superheroe</h2>
+  <p><mark>GET </mark><code> https://localhost:4200/editorials/:id/</code></p>
+  <p><img alt="https://cdn.discordapp.com/attachments/985638124271054928/1016163658511958057/unknown.png"
+      src="https://cdn.discordapp.com/attachments/985638124271054928/1016163658511958057/unknown.png"></p>
+  <p>Muestra los datos de solo ese editorial</p>
+  <h2 class="atx" id="mostrar-superheroes">Mostrar Superheroes</h2>
+  <p><mark>GET</mark> <code> https://localhost:4200/superheroes</code></p>
+  <p><img alt="https://cdn.discordapp.com/attachments/985638124271054928/1016161559657066526/unknown.png"
+      src="https://cdn.discordapp.com/attachments/985638124271054928/1016161559657066526/unknown.png"></p>
+  <p>Muestra el id, nombre y la primera aparicion de cada superheroe. Tambien muestra el id de la Editorial a la cual
+    pertenece cada superheroe.</p>
+  <h2 class="atx" id="mostrar-datos-de-1-superheroe-1">Mostrar datos de 1 superheroe</h2>
+  <p><mark>GET</mark><code> https://localhost:4200/superheroes/:nombre/</code></p>
+  <p><img alt="https://cdn.discordapp.com/attachments/985638124271054928/1016162622976036994/unknown.png"
+      src="https://cdn.discordapp.com/attachments/985638124271054928/1016162622976036994/unknown.png"></p>
+  <p>Muestra los datos de solo ese superheroe.</p>
+  <h2 class="atx" id="mostrar-los-superheroes-de-1-editorial">Mostrar los superheroes de 1 editorial</h2>
+  <p><mark>GET</mark> <code> https://localhost:4200/superheroes/editorial/:id/</code></p>
+  <p><img alt="https://cdn.discordapp.com/attachments/985638124271054928/1016174756879409262/unknown.png"
+      src="https://cdn.discordapp.com/attachments/985638124271054928/1016174756879409262/unknown.png"></p>
+  <p>Muestra la informacion de todos los superheroes de la editorial escogida.</p>
+</article>
