@@ -1,4 +1,15 @@
-<article class="markdown-body">
+<mat-toolbar color="primary">
+
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/api">API</button>
+    <button mat-menu-item routerLink="/comic">Ver Comics</button>
+    <button mat-menu-item routerLink="/favoritos">Favoritos</button>
+    <button mat-menu-item routerLink="/principal">Inicio</button>
+  </mat-menu>
+  
+  </mat-toolbar>
+<article>
   <h1 class="atx" id="metodos-de-la-api-rest">Metodos de la API REST</h1>
   <h2 class="atx" id="mostrar-editoriales">Mostrar Editoriales</h2>
   <p><mark>GET </mark><code> https://localhost:4200/editorials</code></p>

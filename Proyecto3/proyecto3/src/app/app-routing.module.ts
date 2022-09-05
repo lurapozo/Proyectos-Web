@@ -13,7 +13,7 @@ import { ComicsComponent } from './comics/comics.component';
 const routes: Routes = [
   { path: "editorial/:id", component: EditorialComponent },
   { path: "favoritos", component: FavoritosComponent },
-  { path: "login", component: LoginComponent },
+  { path: "api", component: LoginComponent },
   { path: "principal", component: PrincpalComponent },
   { path: "comic", component: ComicsComponent },
   { path: "**", redirectTo: "principal" }
